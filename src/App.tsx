@@ -1,13 +1,19 @@
-
+import {Routes, Route} from 'react-router-dom'
 import './App.css'
+import { lazy } from 'react'
+
+const Layout = lazy(() => import("./Layout"));
+const HomePage = lazy(() => import("./pages/HomePages"));
 
 function App() {
 
   return (
     <>
-      <div>
-       <h1>Portfolio</h1>
-      </div>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<HomePage/> } />
+        </Route>
+      </Routes>
 
     </>
   )
