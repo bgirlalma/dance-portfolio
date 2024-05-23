@@ -1,29 +1,20 @@
-import { Menu } from 'antd'
-import {
-  HomeOutlined,
-  PlayCircleOutlined,
-  TeamOutlined,
-  MailOutlined,
-} from "@ant-design/icons";
+import { MenuItem } from "react-pro-sidebar";
+import React from "react";
+import { StyledMenu } from "./sidebarItems.styled";
+import { NavLink } from "react-router-dom";
 
-const SidebarItems = () => {
-   
-    return (
-      <Menu theme="dark">
-        <Menu.Item key="home" icon={<HomeOutlined />}>
-          Home
-        </Menu.Item>
-        <Menu.Item key="home" icon={<PlayCircleOutlined />}>
-          Video
-        </Menu.Item>
-        <Menu.Item key="home" icon={<TeamOutlined />}>
-          Students
-        </Menu.Item>
-        <Menu.Item key="home" icon={<MailOutlined />}>
-          Contacts
-        </Menu.Item>
-      </Menu>
-    );
+interface Props {
+  darkTheme: boolean;
+}
+const SidebarItems: React.FC<Props> = () => {
+  return (
+    <StyledMenu>
+      <MenuItem component={<NavLink to="/home" />}>Home</MenuItem>
+      <MenuItem component={<NavLink to="/video" />}>Video</MenuItem>
+      <MenuItem component={<NavLink to="/students" />}>Students</MenuItem>
+      <MenuItem component={<NavLink to="/contacts" />}>Contacts</MenuItem>
+    </StyledMenu>
+  );
 };
 
 export default SidebarItems;
