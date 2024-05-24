@@ -2,7 +2,7 @@ import { useState } from "react";
 import Logo from "./Logo/logo";
 import SidebarItems from "./SidebarItems/sidebar-items";
 import ToggleButton from "./ToggleButton/toggleButton";
-import { SiderMenu } from "./sidebar..styled";
+import { SiderMenu } from "./sidebar.styled";
 
 const Sidebar = () => {
     const [darkTheme, setDarkTheme] = useState(true)
@@ -11,7 +11,7 @@ const Sidebar = () => {
         setDarkTheme(!darkTheme);
     }
     return (
-      <SiderMenu >
+      <SiderMenu darkTheme={darkTheme}>
         <Logo />
         <SidebarItems darkTheme={darkTheme} />
         <ToggleButton darkTheme={darkTheme} toggleTheme={toggleTheme} />

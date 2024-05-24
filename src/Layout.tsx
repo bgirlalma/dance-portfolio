@@ -1,9 +1,11 @@
 import Sidebar from "./components/SideBar/sidebar";
+import { GlobalStyled } from "./globalStyled";
 
 const Layout = () => {
     return (
         <div>
-<Sidebar/>
+            <Sidebar />
+            <GlobalStyled/>
         </div>
     )
 }
