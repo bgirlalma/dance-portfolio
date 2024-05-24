@@ -12,7 +12,7 @@ const ToggleButton: React.FC<Props> = ({ darkTheme, toggleTheme }) => {
   return (
     <div>
       <SwitchButton darkTheme={darkTheme} onClick={toggleTheme}>
-        {darkTheme ? <FcNightLandscape /> : <WiDaySunny />}
+        {darkTheme ? <WiDaySunny /> : <FcNightLandscape />}
       </SwitchButton>
     </div>
   );

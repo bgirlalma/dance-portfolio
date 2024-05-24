@@ -12,7 +12,7 @@ margin: 0 0 20px 20px;
   height: 30px;
   border: none;
   background-color: ${(props) => (props.darkTheme ? "#0f084f" : "#fff")};
-  color: #000;
+  color: #fff;
 
   display: flex;
   align-items: center;

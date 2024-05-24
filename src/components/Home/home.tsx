@@ -1,8 +1,10 @@
+import {TitleHome} from './home.styled'
 const Home = () => {
     return (
-        <>
-            <h2>Home Page</h2>
-        </>
+        <div>
+            <TitleHome>Home Page</TitleHome>
+       
+        </div>
     )
 }
 

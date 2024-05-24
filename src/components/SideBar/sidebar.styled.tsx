@@ -5,7 +5,7 @@ interface SidebarProps {
 }
 
 export const SiderMenu = styled.nav<SidebarProps>`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -14,5 +14,15 @@ export const SiderMenu = styled.nav<SidebarProps>`
 
   @media screen and (min-width: 450px) {
     max-width: 300px;
+  }
+`;
+
+export const SideLogoContainer = styled.div`
+display: flex;
+align-items: center;
+padding: 40px 0 0 10px;
+  svg {
+    width: 28px;
+    height: 28px;
   }
 `;
