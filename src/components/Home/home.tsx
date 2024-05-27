@@ -1,11 +1,11 @@
-import {TitleHome} from './home.styled'
+import HomeItems from "./Homeitems/homeItems";
+
 const Home = () => {
-    return (
-        <div>
-            <TitleHome>Home Page</TitleHome>
-       
-        </div>
-    )
-}
+  return (
+    <div>
+      <HomeItems/>
+    </div>
+  );
+};
 
 export default Home;

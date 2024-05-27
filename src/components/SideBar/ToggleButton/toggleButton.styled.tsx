@@ -5,20 +5,20 @@ interface SwitchButtonProps {
 }
 
 export const SwitchButton = styled.button<SwitchButtonProps>`
-position: absolute;
-bottom: 0;
-margin: 0 0 20px 20px;
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 20px 20px;
   width: 80px;
   height: 30px;
   border: none;
-  background-color: ${(props) => (props.darkTheme ? "#0f084f" : "#fff")};
-  color: #fff;
+  background-color: ${(props) => (props.darkTheme ? "#fff" : "#0f084f")};
+  color: #000;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  &:hover{
+  &:hover {
     border: none;
   }
 

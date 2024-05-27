@@ -31,7 +31,7 @@ export const StyledMenuItems = styled(NavLink)<Props>`
   display: flex;
   align-items: center;
   gap: 20px;
-  color: ${(props) => (props.darkTheme ? "#0f084f" : "#fff")};
+  color: ${(props) => (props.darkTheme ? "#fff" : "#0f084f")};
 
   &:hover {
     color: #fff;

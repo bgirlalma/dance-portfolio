@@ -3,10 +3,18 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyled = createGlobalStyle`
 #root {
  --main-font-family: 'Oxygen', sans-serif;
+
+ --color-main-title: #090432;
+ --color-title: #414048;
+ --color-title-three: #540A6D;
+ --color-span: #92789B;
+ --color-desc: #3C1849;
+ --color-city-title: #551010;
 }
 
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Roboto', 'Oxygen', sans-serif, 'Jacquard 24', system-ui, "Sevillana", cursive;
   box-sizing: border-box;
 background-color: #fff;
