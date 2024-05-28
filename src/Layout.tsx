@@ -13,7 +13,7 @@ const Container = styled.div`
 const FlexComponent = styled.div`
 
   @media screen and (min-width: 768px) {
-    margin-left: 300px;
+ margin-left: 400px;
   }
 `;
 const Layout = () => {

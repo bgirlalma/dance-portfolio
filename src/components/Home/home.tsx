@@ -1,10 +1,11 @@
 import HomeItems from "./Homeitems/homeItems";
+import {FlexContainer} from './home.styled'
 
 const Home = () => {
   return (
-    <div>
+    <FlexContainer>
       <HomeItems/>
-    </div>
+    </FlexContainer>
   );
 };
 
