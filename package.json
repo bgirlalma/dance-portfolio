@@ -1,7 +1,7 @@
 {
   "name": "dance-portfolio",
   "private": true,
-  "homepage": "https://bgirlalma.github.io/dance-portfolio",
+
   "version": "0.0.0",
   "type": "module",
   "scripts": {
