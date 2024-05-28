@@ -7,8 +7,9 @@ export const GlobalStyled = createGlobalStyle`
  --color-main-title: #090432;
  --color-title: #414048;
  --color-title-three: #540A6D;
- --color-span: #92789B;
  --color-desc: #3C1849;
+ --color-white: #fff;
+ --color-black: #000;
  --color-city-title: #551010;
 }
 

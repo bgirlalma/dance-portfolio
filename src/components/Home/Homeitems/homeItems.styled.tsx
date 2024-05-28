@@ -25,8 +25,34 @@ export const Container = styled.div`
 `;
 
 export const FlexContainer = styled.div`
-  display: flex;
   margin-bottom: 20px;
+  @-webkit-keyframes slide-down {
+    0% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-down {
+    0% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  animation: slide-down 1s ease-out forwards;
 
   @media screen and (min-width: 1000px) {
     display: flex;
@@ -35,10 +61,24 @@ export const FlexContainer = styled.div`
   }
 `;
 
+export const Image = styled.img`
+  width: 250px;
+  height: auto;
+
+  @media screen and (min-width: 1000px) {
+ width: auto;
+  }
+`;
+
 export const MainTitleHomeItems = styled.h1`
-font-family: var( --main-font-family);
+  font-family: var(--main-font-family);
   color: var(--color-main-title);
   font-size: 40px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1000px) {
+    margin-bottom: 40px;
+  }
 `;
 
 export const MainListItems = styled.ul`
@@ -55,10 +95,39 @@ export const MainListItems = styled.ul`
 export const Items = styled.li`
   display: flex;
   flex-direction: column;
-  border: 1px solid #090432;
+
   border-radius: 10px;
   padding: 15px 20px;
   gap: 10px;
+  background: rgb(80, 164, 54);
+  background: linear-gradient(
+    24deg,
+    rgba(80, 164, 54, 1) 34%,
+    rgba(101, 189, 242, 1) 81%
+  );
+
+  @-webkit-keyframes scale-up-hor-center {
+    0% {
+      -webkit-transform: scaleX(0.4);
+      transform: scaleX(0.4);
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+  @keyframes scale-up-hor-center {
+    0% {
+      -webkit-transform: scaleX(0.4);
+      transform: scaleX(0.4);
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+
+  animation: scale-up-hor-center 1s ease-in-out forwards;
 
   @media screen and (min-width: 1200px) {
     padding: 15px;
@@ -67,7 +136,7 @@ export const Items = styled.li`
 
 export const ItemsListTitle = styled.h2`
   font-family: var(--main-font-family);
-  color: var(--color-title);
+  color: var(--color-white);
   font-size: 24px;
 
   @media screen and (min-width: 1200px) {
@@ -79,7 +148,6 @@ export const CityTitle = styled.h3`
   font-family: var(--main-font-family);
   color: var(--color-city-title);
   font-size: 18px;
-  text-decoration: underline;
 `;
 
 export const ListTitleStudio = styled.p`
@@ -91,7 +159,7 @@ export const ListTitleStudio = styled.p`
 `;
 
 export const ListDescStudio = styled.span`
-  color: var(--color-span);
+  color: var(--color-desc);
   font-size: 12px;
   text-decoration: underline;
 `;

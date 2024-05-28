@@ -1,7 +1,8 @@
 import {
     Container,
-    FlexContainer,
-    MainTitleHomeItems,
+  FlexContainer,
+  MainTitleHomeItems,
+    Image,
   MainListItems,
   Items,
     ItemsListTitle,
@@ -12,13 +13,14 @@ import {
   ItemsListDesc,
 } from "./homeItems.styled";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
+import HomePhoto from '../img/photo-alma.png'
 
 const HomeItems = () => {
   return (
     <Container>
       <FlexContainer>
         <MainTitleHomeItems>Akulina Alina</MainTitleHomeItems>
-        <img src="#" alt="photo Alina" />
+        <Image src={HomePhoto} alt="photo Alina" />
       </FlexContainer>
       <MainListItems>
         <Items>
