@@ -84,7 +84,7 @@ export const MainTitleHomeItems = styled.h1`
 export const MainListItems = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 
   @media screen and (min-width: 1200px) {
     display: grid;

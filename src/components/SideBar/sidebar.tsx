@@ -1,24 +1,31 @@
-import { useState } from "react";
-import Logo from "./Logo/logo";
+import React, { useState } from "react";
 import SidebarItems from "./SidebarItems/sidebar-items";
 import ToggleButton from "./ToggleButton/toggleButton";
-import { SiderMenu, SideLogoContainer } from "./sidebar.styled";
+import { SiderMenu, ButtonCloseMenu } from "./sidebar.styled";
+import { IoCloseCircleOutline } from "react-icons/io5";
 
-const Sidebar = () => {
-    const [darkTheme, setDarkTheme] = useState(true)
+interface Props {
+  isMenuOpen: boolean;
+  menuClose: () => void;
+}
 
-    const toggleTheme = () => {
-        setDarkTheme(!darkTheme);
-    }
-    return (
-      <SiderMenu darkTheme={darkTheme}>
-        <SideLogoContainer>
-          <Logo />
-        </SideLogoContainer>
+const Sidebar: React.FC<Props> = ({isMenuOpen, menuClose }) => {
+  const [darkTheme, setDarkTheme] = useState(true);
+
+  const toggleTheme = () => {
+    setDarkTheme(!darkTheme);
+  };
+
+  return (
+    <>
+      {!isMenuOpen && (<SiderMenu darkTheme={darkTheme}>
+        <ButtonCloseMenu darkTheme={darkTheme} onClick={menuClose}>
+          <IoCloseCircleOutline />
+        </ButtonCloseMenu>
         <SidebarItems darkTheme={darkTheme} />
         <ToggleButton darkTheme={darkTheme} toggleTheme={toggleTheme} />
-      </SiderMenu>
-    );
-}
+      </SiderMenu>)}</>
+  );
+};
 
 export default Sidebar;

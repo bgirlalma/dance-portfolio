@@ -25,13 +25,8 @@ export const GlobalStyled = createGlobalStyle`
   margin: 0;
   padding: 0;
   font-family: 'Roboto', 'Oxygen', sans-serif, 'Jacquard 24', system-ui, "Sevillana", cursive;
-  background: rgb(109, 196, 122);
-  background: radial-gradient(
-    circle,
-    rgba(109, 196, 122, 1) 34%,
-    rgba(197, 213, 147, 1) 53%,
-    rgba(194, 232, 233, 1) 81%
-  );
+  background: rgb(109,196,122);
+background: linear-gradient(14deg, rgba(109,196,122,1) 34%, rgba(197,213,147,1) 53%, rgba(194,232,233,1) 81%);
   
 }
 

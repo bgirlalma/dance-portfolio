@@ -3,30 +3,38 @@ import Sidebar from "./components/SideBar/sidebar";
 import { GlobalStyled } from "./globalStyled";
 
 import styled from "styled-components";
+import Header from "./components/Header/header";
+import { useState } from "react";
 
 
 const Container = styled.div`
-  position: relative;
-  min-height: 100vh;
+  display: flex;
+
+  @media screen and (min-width: 450px) {
+    margin-left: 400px;
+  }
 `;
 
 const FlexComponent = styled.div`
+flex: 1;
 
-  @media screen and (min-width: 768px) {
- margin-left: 400px;
-  }
 `;
 const Layout = () => {
+
+   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+   const toggleMenu = () => {
+     setIsMenuOpen(!isMenuOpen);
+   };
     return (
-      <>
-        <Container>
-          <Sidebar />
-          <FlexComponent>
-            <Outlet />
-          </FlexComponent>
+      <Container>
+        <Sidebar isMenuOpen={isMenuOpen}  menuClose={toggleMenu} />
+        <FlexComponent>
+          <Header menuOpen={toggleMenu} />
           <GlobalStyled />
-        </Container>
-      </>
+          <Outlet />
+        </FlexComponent>
+      </Container>
     );
 }
 

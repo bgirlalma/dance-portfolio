@@ -8,6 +8,7 @@ interface Props {
 export const StyledMenuContainer = styled.ul`
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
 
   @media screen and (min-width: 400px){
     max-width: 400px;
