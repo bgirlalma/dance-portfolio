@@ -11,6 +11,7 @@ export const SiderMenu = styled.nav<SidebarProps>`
   width: 100%;
   height: 100vh;
   background-color: ${(props) => (props.darkTheme ? "#0f084f" : "#c2e8e9")};
+  z-index: 999;
 
   @media screen and (min-width: 450px) {
     max-width: 300px;

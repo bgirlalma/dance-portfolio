@@ -8,16 +8,16 @@ import { useState } from "react";
 
 
 const Container = styled.div`
-  display: flex;
-
-  @media screen and (min-width: 450px) {
+  @media screen and (min-width: 768px) {
+    display: flex;
     margin-left: 400px;
   }
 `;
 
 const FlexComponent = styled.div`
-flex: 1;
-
+  @media screen and (min-width: 768px) {
+    flex: 1;
+  }
 `;
 const Layout = () => {
 
