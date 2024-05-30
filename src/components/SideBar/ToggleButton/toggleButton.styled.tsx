@@ -6,17 +6,28 @@ interface SwitchButtonProps {
 
 export const SwitchButton = styled.button<SwitchButtonProps>`
   position: absolute;
-  bottom: 0;
-  margin: 0 0 20px 20px;
-  width: 80px;
-  height: 30px;
+  top: 0;
+  margin: 20px 0 0 20px;
+
+
+  width: 25px;
+  height: 25px;
   border: none;
+  border-radius: 50%;
   background-color: ${(props) => (props.darkTheme ? "#fff" : "#0f084f")};
   color: #000;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+  }
 
   &:hover {
     border: none;

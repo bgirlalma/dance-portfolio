@@ -2,8 +2,10 @@ import Home from "../components/Home/home";
 import styled from "styled-components";
 
 const HomeContainer = styled.div`
-  width: 100%;
-  padding: 0 20px 0 20px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const HomePage = () => {

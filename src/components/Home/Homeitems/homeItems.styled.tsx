@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   @media screen and (min-width: 768px) {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: stretch;
-    flex-wrap: wrap;
+    // flex-direction: row;
+    // justify-content: space-evenly;
+    // align-items: center;
+    // align-content: stretch;
+    // flex-wrap: wrap;
   }
 
   @media screen and (min-width: 1000px) {
@@ -25,7 +25,12 @@ export const Container = styled.div`
 `;
 
 export const FlexContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
   margin-bottom: 20px;
+
   @-webkit-keyframes slide-down {
     0% {
       -webkit-transform: translateY(-100%);
@@ -54,19 +59,15 @@ export const FlexContainer = styled.div`
 
   animation: slide-down 1s ease-out forwards;
 
+  @media screen and (min-width: 540px) {
+    flex-wrap: unset;
+    align-items: center;
+  }
+
   @media screen and (min-width: 1000px) {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-  }
-`;
-
-export const Image = styled.img`
-  width: 250px;
-  height: auto;
-
-  @media screen and (min-width: 1000px) {
- width: auto;
   }
 `;
 
@@ -78,6 +79,15 @@ export const MainTitleHomeItems = styled.h1`
 
   @media screen and (min-width: 1000px) {
     margin-bottom: 40px;
+  }
+`;
+
+export const Image = styled.img`
+  width: 250px;
+  height: auto;
+
+  @media screen and (min-width: 1000px) {
+    width: auto;
   }
 `;
 

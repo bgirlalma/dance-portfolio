@@ -13,21 +13,15 @@ export const GlobalStyled = createGlobalStyle`
  --color-city-title: #551010;
 }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+#root, #app {
+  width: 100%;
+  height: 100%;
+}
 
- body {
-    width: 100%;
-    height: 100%;
+ html, body {
   margin: 0;
-  padding: 0;
   font-family: 'Roboto', 'Oxygen', sans-serif, 'Jacquard 24', system-ui, "Sevillana", cursive;
-  background: rgb(109,196,122);
-background: linear-gradient(14deg, rgba(109,196,122,1) 34%, rgba(197,213,147,1) 53%, rgba(194,232,233,1) 81%);
-  
+   box-sizing: border-box;
 }
 
 code {

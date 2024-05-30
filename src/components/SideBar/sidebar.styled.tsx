@@ -24,7 +24,8 @@ export const ButtonCloseMenu = styled.button<SidebarProps>`
   right: 0;
   margin-top: 20px;
   margin-right: 20px;
-  botder: none;
+  border: none;
+  
   padding: 0;
   background-color: inherit;
 
