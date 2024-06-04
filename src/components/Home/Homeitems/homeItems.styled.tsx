@@ -1,18 +1,19 @@
 import styled from "styled-components";
 
+
 export const Container = styled.div`
   @media screen and (min-width: 768px) {
     display: flex;
-    // flex-direction: row;
-    // justify-content: space-evenly;
-    // align-items: center;
-    // align-content: stretch;
-    // flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: stretch;
+    flex-wrap: wrap;
   }
 
   @media screen and (min-width: 1000px) {
     display: grid;
-    grid-template-columns: 350px 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: flex-start;
     gap: 20px;
   }
@@ -71,9 +72,10 @@ export const FlexContainer = styled.div`
   }
 `;
 
-export const MainTitleHomeItems = styled.h1`
+export const MainTitleHomeItems = styled.h1<{ darkTheme: boolean }>`
   font-family: var(--main-font-family);
-  color: var(--color-main-title);
+  color: ${(props) =>
+    props.darkTheme ? "var(--color-white)" : "var(--color-main-title)"};
   font-size: 40px;
   margin-bottom: 20px;
 
@@ -96,25 +98,28 @@ export const MainListItems = styled.ul`
   flex-direction: column;
   gap: 25px;
 
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   @media screen and (min-width: 1200px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 `;
 
-export const Items = styled.li`
+export const Items = styled.li<{ darkTheme: boolean }>`
   display: flex;
   flex-direction: column;
 
   border-radius: 10px;
   padding: 15px 20px;
   gap: 10px;
-  background: rgb(80, 164, 54);
-  background: linear-gradient(
-    24deg,
-    rgba(80, 164, 54, 1) 34%,
-    rgba(101, 189, 242, 1) 81%
-  );
+  background: ${({ darkTheme }) =>
+    darkTheme
+      ? "#fff"
+      : "linear-gradient(24deg, rgba(80, 164, 54, 0.5) 34%, rgba(101, 189, 242, 0.5) 81%)"};
 
   @-webkit-keyframes scale-up-hor-center {
     0% {
@@ -144,9 +149,10 @@ export const Items = styled.li`
   }
 `;
 
-export const ItemsListTitle = styled.h2`
+export const ItemsListTitle = styled.h2<{ darkTheme: boolean }>`
   font-family: var(--main-font-family);
-  color: var(--color-white);
+  color: ${({ darkTheme }) =>
+    darkTheme ? "var(--color-black)" : "var(--color-white)"};
   font-size: 24px;
 
   @media screen and (min-width: 1200px) {

@@ -14,25 +14,38 @@ import {
 } from "./homeItems.styled";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 import HomePhoto from '../img/photo-alma.png'
+import React from "react";
+import { useOutletContext } from "react-router-dom";
 
-const HomeItems = () => {
+interface Props {
+  darkTheme: boolean;
+}
+
+const HomeItems: React.FC = () => {
+  const { darkTheme } = useOutletContext<Props>();
+
   return (
     <Container>
       <FlexContainer>
-        <MainTitleHomeItems>Akulina Alina</MainTitleHomeItems>
+        <MainTitleHomeItems darkTheme={darkTheme}>
+          Akulina Alina
+        </MainTitleHomeItems>
+
         <Image src={HomePhoto} alt="photo Alina" />
       </FlexContainer>
       <MainListItems>
-        <Items>
-          <ItemsListTitle>NickName</ItemsListTitle>
+        <Items darkTheme={darkTheme}>
+          <ItemsListTitle darkTheme={darkTheme}>NickName</ItemsListTitle>
           <ItemsListDesc>B.girl Alma</ItemsListDesc>
         </Items>
-        <Items>
-          <ItemsListTitle>Teaching Experience</ItemsListTitle>
+        <Items darkTheme={darkTheme}>
+          <ItemsListTitle darkTheme={darkTheme}>
+            Teaching Experience
+          </ItemsListTitle>
           <ItemsListDesc>7 years</ItemsListDesc>
         </Items>
-        <Items>
-          <ItemsListTitle>Styles</ItemsListTitle>
+        <Items darkTheme={darkTheme}>
+          <ItemsListTitle darkTheme={darkTheme}>Styles</ItemsListTitle>
           <ItemsListDesc>
             <VscDebugBreakpointLog />
             Breaking
@@ -46,8 +59,10 @@ const HomeItems = () => {
             Acrobatics
           </ItemsListDesc>
         </Items>
-        <Items>
-          <ItemsListTitle>Introduction to other styles</ItemsListTitle>
+        <Items darkTheme={darkTheme}>
+          <ItemsListTitle darkTheme={darkTheme}>
+            Introduction to other styles
+          </ItemsListTitle>
           <ItemsListDesc>
             <VscDebugBreakpointLog />
             Locking
@@ -65,8 +80,8 @@ const HomeItems = () => {
             Jazz Funk
           </ItemsListDesc>
         </Items>
-        <Items>
-          <ItemsListTitle>Own Dance Experience</ItemsListTitle>
+        <Items darkTheme={darkTheme}>
+          <ItemsListTitle darkTheme={darkTheme}>Own Dance Experience</ItemsListTitle>
           <ItemsListDesc>
             <VscDebugBreakpointLog />
             Breaking: 16 years
@@ -80,8 +95,8 @@ const HomeItems = () => {
             Acrobatics: 2 years
           </ItemsListDesc>
         </Items>
-        <Items>
-          <ItemsListTitle>Job</ItemsListTitle>
+        <Items darkTheme={darkTheme}>
+          <ItemsListTitle darkTheme={darkTheme}>Job</ItemsListTitle>
           <ul>
             <CityTitle>The city of Kryvyi Rih</CityTitle>
             <ItemsStudio>

@@ -11,21 +11,20 @@ interface Props {
 }
 
 const Container = styled.div<Props>`
-  background-color: ${(props) =>
-    props.darkTheme ? "#000" : "rgb(109, 196, 122)"};
-  background: rgb(109, 196, 122);
-  background: linear-gradient(
+  background: ${(props) =>
+    props.darkTheme ? "#000" : `linear-gradient(
     14deg,
     rgba(109, 196, 122, 1) 34%,
     rgba(197, 213, 147, 1) 53%,
     rgba(194, 232, 233, 1) 81%
-  );
+  )`};
+
   @media screen and (min-width: 768px) {
     display: flex;
   }
 
-  @media screen and (min-width: 1000px) {
-    padding-left: 400px;
+  @media screen and (min-width: 1200px){
+    margin-left: 300px;
   }
 `;
 
@@ -57,7 +56,7 @@ const Layout = () => {
         <FlexComponent>
           <Header menuOpen={toggleMenu} />
           <GlobalStyled />
-          <Outlet />
+          <Outlet context={{darkTheme}}/>
         </FlexComponent>
       </Container>
     );

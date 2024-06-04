@@ -41,4 +41,8 @@ export const ButtonCloseMenu = styled.button<SidebarProps>`
     height: 25px;
     color: ${(props) => (props.darkTheme ? "#c2e8e9" : "#0f084f")};
   }
+
+  @media screen and (min-width: 1200px){
+    display: none;
+  }
 `;

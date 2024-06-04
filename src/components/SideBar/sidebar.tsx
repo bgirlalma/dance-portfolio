@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SidebarItems from "./SidebarItems/sidebar-items";
 import ToggleButton from "./ToggleButton/toggleButton";
 import { SiderMenu, ButtonCloseMenu } from "./sidebar.styled";
@@ -17,10 +17,25 @@ const Sidebar: React.FC<Props> = ({
   toggleTheme,
   darkTheme,
 }) => {
+  const [isMenuAlwaysOpen, setIsAlwaysOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsAlwaysOpen(window.innerWidth >= 1200);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
-      {isMenuOpen && (
+      {isMenuOpen || isMenuAlwaysOpen ? (
         <SiderMenu darkTheme={darkTheme}>
           <ToggleButton darkTheme={darkTheme} toggleTheme={toggleTheme} />
           <ButtonCloseMenu darkTheme={darkTheme} onClick={menuClose}>
@@ -28,7 +43,7 @@ const Sidebar: React.FC<Props> = ({
           </ButtonCloseMenu>
           <SidebarItems darkTheme={darkTheme} />
         </SiderMenu>
-      )}
+      ) : null}
     </>
   );
 };
