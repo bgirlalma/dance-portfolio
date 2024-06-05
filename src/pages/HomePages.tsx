@@ -6,9 +6,9 @@ const HomeContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 
-  @media screen and (min-width: 1000px){
-  
+  @media screen and (min-width: 1000px) {
   }
 `;
 
