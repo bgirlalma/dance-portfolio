@@ -12,7 +12,9 @@ interface Props {
 
 const Container = styled.div<Props>`
   background: ${(props) =>
-    props.darkTheme ? "#000" : `linear-gradient(
+    props.darkTheme
+      ? "#454198"
+      : `linear-gradient(
     14deg,
     rgba(109, 196, 122, 1) 34%,
     rgba(197, 213, 147, 1) 53%,
@@ -23,7 +25,7 @@ const Container = styled.div<Props>`
     display: flex;
   }
 
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
     margin-left: 300px;
   }
 `;
