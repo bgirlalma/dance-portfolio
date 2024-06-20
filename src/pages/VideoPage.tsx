@@ -3,6 +3,9 @@ import styled from "styled-components";
 
 const VideoContainer = styled.div`
   padding: 0 20px 40px;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 `;
 
 const VideoPage = () => {

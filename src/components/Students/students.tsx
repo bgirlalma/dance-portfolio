@@ -1,6 +1,10 @@
+import VideoStudents from "./StudentsVideo/video";
+
 const Students = () => {
     return (
         <>
+            <VideoStudents />
+            
         </>
      )
 }

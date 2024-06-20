@@ -6,8 +6,8 @@ interface Props {
 }
 const VideoPlayer: React.FC<Props> = ({ videoId }) => {
       const opts: YouTubeProps['opts'] = {
-        height: "300",
-        width: "500",
+        height: "200",
+        width: "300",
     };
     
      const onReady: YouTubeProps['onReady'] = (event) => {
