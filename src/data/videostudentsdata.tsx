@@ -25,4 +25,12 @@ export const VideoStudentsData: Students[] = [
     id: nanoid(),
     url: "https://youtu.be/bg6jzQW50X0?si=DZpnkzFrqGVZ0kDj",
   },
+  {
+    id: nanoid(),
+    url: "https://youtube.com/shorts/I_zPfH0-6_s?si=_ZOO-VpOVF0_nKXE",
+  },
+  {
+    id: nanoid(),
+    url: "https://youtube.com/shorts/jbLxKya4TSA?si=aIbkQb4-JlgYoc3n",
+  },
 ];

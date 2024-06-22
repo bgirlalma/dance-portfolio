@@ -20,6 +20,17 @@ export const WrappContainer = styled.ul`
   @media screen and (min-width: 1448px) {
     width: auto;
     grid-template-columns: repeat(3, 1fr);
+    margin-left: unset;
+    margin-right: unset;
+  }
+
+  @media screen and (min-width: 1600px) {
+    width: 1250px;
+  }
+
+  @media screen and (min-width: 2200px) {
+    width: 1740px;
+    grid-template-columns: repeat(4, 1fr);
   }
 `;
 
@@ -60,5 +71,14 @@ export const Image = styled.img`
 
   @media screen and (min-width: 1448px) {
     width: 350px;
+  }
+
+  @media screen and (min-width: 1600px) {
+    width: 400px;
+  }
+
+  @media screen and (min-width: 2200px) {
+    width: 450px;
+    height: 425px;
   }
 `;

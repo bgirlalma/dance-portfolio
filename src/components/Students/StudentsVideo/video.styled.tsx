@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-export const Title = styled.h2`
+export const Title = styled.h2<{ darkTheme: boolean }>`
   max-width: 400px;
   font-family: var(--main-font-family);
   font-size: 18px;
+  color: ${(props) =>
+    props.darkTheme ? "var(--color-white)" : "var(--color-black)"};
 
   margin-bottom: 20px;
   padding: 0 20px;
@@ -21,10 +23,12 @@ export const Title = styled.h2`
   }
 `;
 
-export const Desc = styled.p`
+export const Desc = styled.p<{ darkTheme: boolean }>`
   max-width: 400px;
   font-family: var(--main-font-family);
   font-size: 16px;
+  color: ${(props) =>
+    props.darkTheme ? "var(--color-white)" : "var(--color-black)"};
 
   margin-bottom: 20px;
   padding: 0 20px;

@@ -1,6 +1,8 @@
+import { useOutletContext } from "react-router-dom";
 import { VideoStudentsData } from "../../../data/videostudentsdata";
 import VideoPlayer from "../../Video/videoPlayer/videoPlayer";
 import { Title, Desc, WrappContainer, VideoList } from "./video.styled";
+import React from "react";
 
 const extractVideoId = (url: string): string => {
   const regex =
@@ -9,11 +11,16 @@ const extractVideoId = (url: string): string => {
   return match ? match[1] : "";
 };
 
-const VideoStudents = () => {
+interface Props{
+  darkTheme: boolean
+}
+
+const VideoStudents: React.FC = () => {
+  const { darkTheme } = useOutletContext<Props>();
     return (
         <div>
-            <Title> Video students championships, reporting concerts, master classes</Title>
-            <Desc>My students participate in many competitions and had the opportunity to take prizes</Desc>
+            <Title darkTheme={darkTheme}> Video students championships, reporting concerts, master classes</Title>
+            <Desc darkTheme={darkTheme}>My students participate in many competitions and had the opportunity to take prizes</Desc>
         <WrappContainer>
           {VideoStudentsData.map((video) => (
               <VideoList key={video.id}>
