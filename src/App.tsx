@@ -1,10 +1,11 @@
 import {Routes, Route} from 'react-router-dom'
 import { lazy } from 'react'
+import HomePage from './pages/HomePage';
+import VideoPage from './pages/VideoPage';
+import StudentsPage from './pages/StudentsPage';
 
 const Layout = lazy(() => import("./Layout"));
-const HomePage = lazy(() => import("./pages/HomePage"));
-const VideoPage = lazy(() => import("./pages/VideoPage"));
-const StudentsPage = lazy(() => import("./pages/StudentsPage"));
+
 
 function App() {
 

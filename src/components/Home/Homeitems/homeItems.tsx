@@ -81,7 +81,9 @@ const HomeItems: React.FC = () => {
           </ItemsListDesc>
         </Items>
         <Items darkTheme={darkTheme}>
-          <ItemsListTitle darkTheme={darkTheme}>Own Dance Experience</ItemsListTitle>
+          <ItemsListTitle darkTheme={darkTheme}>
+            Own Dance Experience
+          </ItemsListTitle>
           <ItemsListDesc>
             <VscDebugBreakpointLog />
             Breaking: 16 years
@@ -93,6 +95,10 @@ const HomeItems: React.FC = () => {
           <ItemsListDesc>
             <VscDebugBreakpointLog />
             Acrobatics: 2 years
+          </ItemsListDesc>
+          <ItemsListDesc>
+            <VscDebugBreakpointLog />
+            Show Ballet: 4 years
           </ItemsListDesc>
         </Items>
         <Items darkTheme={darkTheme}>

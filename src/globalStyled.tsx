@@ -24,6 +24,10 @@ export const GlobalStyled = createGlobalStyle`
    box-sizing: border-box;
 }
 
+body{
+box-sizing: border-box;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

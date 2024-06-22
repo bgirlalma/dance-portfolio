@@ -1,6 +1,6 @@
 import { VideoStudentsData } from "../../../data/videostudentsdata";
 import VideoPlayer from "../../Video/videoPlayer/videoPlayer";
-import {Title, Desc, WrappContainer } from "./video.styled";
+import { Title, Desc, WrappContainer, VideoList } from "./video.styled";
 
 const extractVideoId = (url: string): string => {
   const regex =
@@ -16,9 +16,9 @@ const VideoStudents = () => {
             <Desc>My students participate in many competitions and had the opportunity to take prizes</Desc>
         <WrappContainer>
           {VideoStudentsData.map((video) => (
-              <li key={video.id}>
+              <VideoList key={video.id}>
                   <VideoPlayer videoId={extractVideoId(video.url)} />
-            </li>
+            </VideoList>
           ))}
         </WrappContainer>
       </div>
