@@ -41,7 +41,7 @@ const Sidebar: React.FC<Props> = ({
           <ButtonCloseMenu darkTheme={darkTheme} onClick={menuClose}>
             <IoCloseCircleOutline />
           </ButtonCloseMenu>
-          <SidebarItems darkTheme={darkTheme} />
+          <SidebarItems darkTheme={darkTheme} menuClose={menuClose} />
         </SiderMenu>
       ) : null}
     </>
