@@ -11,6 +11,7 @@ export const GlobalStyled = createGlobalStyle`
  --color-white: #fff;
  --color-black: #000;
  --color-city-title: #551010;
+ --color-link: #EF1012;
 }
 
 #root, #app {
