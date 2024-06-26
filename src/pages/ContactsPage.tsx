@@ -1,5 +1,6 @@
-import Contacts from "../components/Contacts/contacts";
+
 import styled from "styled-components";
+import Contacts from "../components/Contacts/contacts";
 
 
 const Container = styled.div`
@@ -11,8 +12,8 @@ const Container = styled.div`
 
 const ContactsPage = () => {
     return (
-        <Container>
-            <Contacts/>
+      <Container>
+        <Contacts/>
          </Container>
      )
 }
