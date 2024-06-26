@@ -1,7 +1,12 @@
-import { InstagramSvg } from "../../Contacts/img/instagram";
-import { TelegramSvg } from "../../Contacts/img/telegram";
-import { YouTub } from "../../Contacts/img/youtube";
-import { ContactsList, ContactItem,IconContainer, ContactLink } from "./contactItems.styled";
+import { InstagramSvg } from "../img/instagram";
+import { TelegramSvg } from "../img/telegram";
+import { YouTub } from "../img/youtube";
+import {
+  ContactsList,
+  ContactItem,
+  IconContainer,
+  ContactLink,
+} from "./contactItems.styled";
 
 const ContactItems = () => {
   return (

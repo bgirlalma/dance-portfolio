@@ -40,7 +40,7 @@ const SidebarItems: React.FC<Props> = ({ darkTheme, menuClose }) => {
     localStorage.setItem("currentPath", path);
   };
 
-  //if size < = 450px, shut sidebar at click nav and lest`s go nav
+  //if size < = 450px, shut sidebar at click nav and let`s go nav
   const handleNavigate = (path: string) => {
     if (windowWidth <= 450) {
       menuClose()
