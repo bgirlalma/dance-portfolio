@@ -42,7 +42,7 @@ const HomeItems: React.FC = () => {
           <ItemsListTitle darkTheme={darkTheme}>
             Teaching Experience
           </ItemsListTitle>
-          <ItemsListDesc>7 years</ItemsListDesc>
+          <ItemsListDesc>8 years</ItemsListDesc>
         </Items>
         <Items darkTheme={darkTheme}>
           <ItemsListTitle darkTheme={darkTheme}>Styles</ItemsListTitle>
@@ -56,7 +56,7 @@ const HomeItems: React.FC = () => {
           </ItemsListDesc>
           <ItemsListDesc>
             <VscDebugBreakpointLog />
-            Acrobatics
+            Acrobatic
           </ItemsListDesc>
         </Items>
         <Items darkTheme={darkTheme}>
@@ -86,15 +86,15 @@ const HomeItems: React.FC = () => {
           </ItemsListTitle>
           <ItemsListDesc>
             <VscDebugBreakpointLog />
-            Breaking: 16 years
+            Breaking: from 2008
           </ItemsListDesc>
           <ItemsListDesc>
             <VscDebugBreakpointLog />
-            Hip-Hop: 4 years
+            Hip-Hop: from 2021
           </ItemsListDesc>
           <ItemsListDesc>
             <VscDebugBreakpointLog />
-            Acrobatics: 2 years
+            Acrobatic: from 2021
           </ItemsListDesc>
           <ItemsListDesc>
             <VscDebugBreakpointLog />
@@ -104,7 +104,7 @@ const HomeItems: React.FC = () => {
         <Items darkTheme={darkTheme}>
           <ItemsListTitle darkTheme={darkTheme}>Job</ItemsListTitle>
           <ul>
-            <CityTitle>The city of Kryvyi Rih</CityTitle>
+            <CityTitle>Kryvyi Rih</CityTitle>
             <ItemsStudio>
               <ListTitleStudio>
                 Power Dance studio <ListDescStudio>2013-2014</ListDescStudio>
@@ -122,15 +122,20 @@ const HomeItems: React.FC = () => {
             </ItemsStudio>
           </ul>
           <ul>
-            <CityTitle>The city of Kyiv</CityTitle>
+            <CityTitle>Kyiv</CityTitle>
             <ItemsStudio>
               <ListTitleStudio>
-                D.side dance studio <ListDescStudio>from 2021</ListDescStudio>
+                D.side dance studio <ListDescStudio>2021-2024</ListDescStudio>
               </ListTitleStudio>
             </ItemsStudio>
             <ItemsStudio>
               <ListTitleStudio>
-                Yunia <ListDescStudio>from 2021</ListDescStudio>
+                Yunia <ListDescStudio>2021-2024</ListDescStudio>
+              </ListTitleStudio>
+            </ItemsStudio>
+            <ItemsStudio>
+              <ListTitleStudio>
+                Ace School <ListDescStudio>2022-2025</ListDescStudio>
               </ListTitleStudio>
             </ItemsStudio>
             <ItemsStudio>
@@ -140,7 +145,7 @@ const HomeItems: React.FC = () => {
             </ItemsStudio>
             <ItemsStudio>
               <ListTitleStudio>
-                Ace School <ListDescStudio>from 2022</ListDescStudio>
+                ProRyx dance studio <ListDescStudio>from 2024</ListDescStudio>
               </ListTitleStudio>
             </ItemsStudio>
           </ul>

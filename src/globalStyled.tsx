@@ -20,6 +20,7 @@ export const GlobalStyled = createGlobalStyle`
 }
 
  html, body {
+ height: 100vh;
   margin: 0;
   font-family: 'Roboto', 'Oxygen', sans-serif, 'Jacquard 24', system-ui, "Sevillana", cursive;
    box-sizing: border-box;

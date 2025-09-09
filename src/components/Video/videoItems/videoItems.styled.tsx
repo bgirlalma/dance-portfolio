@@ -10,3 +10,8 @@ export const WrappContainer = styled.ul`
     justify-content: center;
   }
 `;
+
+export const NoneContainer = styled.div`
+width: 100%;
+height: 100vh;
+`;

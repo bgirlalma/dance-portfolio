@@ -1,17 +1,23 @@
 import VideoData from "../../../data/videodata";
 import VideoPlayer from "../videoPlayer/videoPlayer";
-import {WrappContainer}from './videoItems.styled'
+import { WrappContainer, NoneContainer } from "./videoItems.styled";
 
 const extractVideoId = (url: string): string => {
-  const regex =
-    /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/;
-  const match = url.match(regex);
-  return match ? match[1] : "";
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname === "youtu.be") return parsed.pathname.slice(1);
+    if (parsed.searchParams.has("v")) return parsed.searchParams.get("v")!;
+    if (parsed.pathname.includes("/shorts/"))
+      return parsed.pathname.split("/shorts/")[1];
+    return "";
+  } catch {
+    return "";
+  }
 };
 
 const VideoItems = () => {
   return (
-    <div>
+    <NoneContainer>
       <WrappContainer>
         {VideoData.map((video) => (
           <li key={video.id}>
@@ -19,7 +25,7 @@ const VideoItems = () => {
           </li>
         ))}
       </WrappContainer>
-    </div>
+    </NoneContainer>
   );
 };
 

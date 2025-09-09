@@ -1,43 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import YouTube, { YouTubeProps } from "react-youtube";
+
 
 interface Props {
   videoId: string;
 }
+
 const VideoPlayer: React.FC<Props> = ({ videoId }) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const getVideoSizes = () => {
-    if (windowWidth >= 1448) {
-      return { height: "300", width: "350" };
-    } else if (windowWidth >= 1200) {
-      return { width: "260", heigth: "200" };
-    } else if (windowWidth <= 1200) {
-      return { height: "300", width: "400" };
-    }
+  const opts: YouTubeProps["opts"] = {
+    width: "100%",
+    height: "100%",
   };
-  const opts: YouTubeProps["opts"] = getVideoSizes();
 
-  const onReady: YouTubeProps["onReady"] = (event) => {
-    // доступ к экземпляру API YouTube, если это необходимо
-    event.target.pauseVideo();
-  };
   return (
-    <>
-      <YouTube videoId={videoId} opts={opts} onReady={onReady} />
-    </>
+    <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-gray-900">
+
+      <YouTube
+        videoId={videoId}
+        opts={opts}
+      />
+    </div>
   );
 };
 
